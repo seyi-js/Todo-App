@@ -5,8 +5,8 @@ const path = require('path')
 const mongoose = require('mongoose');
 // var MongoClient = require('mongodb').MongoClient;
 mongoose.set('useCreateIndex', true);
-var url = "mongodb://localhost:27017/todoDB";
-var autoIncrement = require("mongodb-autoincrement");
+const url = "mongodb://localhost:27017/todoDB";
+// const autoIncrement = require("mongodb-autoincrement");
 mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true});
 const db = mongoose.connection;
 db.on('error', console.log.bind(console, 'connection error'));
