@@ -1,0 +1,51 @@
+li {
+	list-style: none;
+	color: white;
+	text-align: center;
+};
+
+button {
+	background-color: blue;
+}
+
+h1, form {
+	text-align: center;
+	/*margin: 0 auto;*/
+	color: white;
+}
+
+form button {
+	background-color: rgba(16 30 59);
+	color: white;
+	border:none;
+}
+
+form input {
+	height: 15px;
+	border-left-color: blue;
+	border-left-style: solid;
+	border-left-width: 2px;
+	background-color: rgba(16 30 59);
+}
+.list-element {
+	/*text-align: center;*/
+	background-color: rgba(16 30 59);
+	margin: 0 auto;
+	width: 500px;
+	height: 500px;
+	border-left-color: rgba(10 10 10 10);
+	border-left-style: solid;
+	border-right-style: solid;
+	border-right-width: 5px;
+	border-left-width: 5px;
+	border-radius: 20px;
+	margin-top: 50px;
+	/*padding-left: 50px;*/
+	/*padding-right: 50px;*/
+	padding-top: 30px;
+	/*padding-bottom: 15px;*/
+}
+
+body {
+	background-color: rgba(16 30 59);
+}

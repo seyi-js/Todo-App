@@ -5,39 +5,31 @@
          <link rel="stylesheet" type = "text/css" href= "/static/css/styles.css">
          <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
-</script>
-<script type="text/javascript" src="/static/js/javascript.js"></script>
+		</script>
+		<script type="text/javascript" src="/static/js/javascript.js"></script>
 		<title>
 			TO-DO APP
 		</title>
 	</head>
 	<body>
-		<div id="container">
-		<h1>ToDO App</h1>
+		<div class="list-element">
+				<h1>ToDO App</h1>
+				<form id="todo_for" action="/add_todo" method="POST">
+					<input type='text' name='item' placeholder="ADD TODO"/>
+      				<button type="submit" class="button">
+                    	Add Todo
+             		</button>
+            	</form>
 
-		<form id="todo_form" action="/add_todo" method="POST">
-
-<input type='text' name='item' placeholder="ADD TODO"/>
-      <button type="submit" class="btn">
-                    Add Todo
-                </button>
-
-
-</form>
-
-	</div>
-	<div>
-		<% for(var i = 0; i < todoList.length; i++) { %>
-		<ul>
-			<li id="<%=i%>"> <%= todoList[i].todos %>
-				<a href="/delete?todo=<%=i%>" class='remove' >
-				 <i class="fa fa-remove" style="font-size:10px;color:blue"></i>
-				</a>
-			</li>
-		</ul>
-	<% } %>
-	</div>
+					<% for(var i = 0; i < todoList.length; i++) { %>
+					<ul>
+						<li id="<%=i%>"> <%= todoList[i].todos %>
+							<a href="/delete?todo=<%=i%>">
+				 			<i class="fa fa-remove" style="font-size:10px;color:blue"></i>
+							</a>
+						</li>
+					</ul>
+					<% } %>
+		</div>
 	</body>
-	<footer>
-	</footer>
 </html>
